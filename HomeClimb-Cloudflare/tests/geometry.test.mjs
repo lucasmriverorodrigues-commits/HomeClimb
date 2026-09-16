@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {pixelContour,nextHoldName,removeFace,holdPath} from '../dist/geometry.js';
+import {detectHolds} from '../dist/hold-detection.js';
+test('numbering is independent by face and reuses available numbers',()=>{const h=[{faceId:'a',name:'A1'},{faceId:'a',name:'A3'},{faceId:'b',name:'A1'}];assert.equal(nextHoldName(h,'a'),'A2');assert.equal(nextHoldName(h,'b'),'A2');assert.equal(nextHoldName(h,'c'),'A1');});
+test('removal only affects the current wall and selected face',()=>{const wall={faces:[{id:'a'},{id:'b'}],holds:[{faceId:'a'},{faceId:'b'}]},snapshot=structuredClone(wall);removeFace(wall,'a');assert.equal(wall.faces[0].id,'b');assert.equal(wall.holds.length,1);assert.equal(snapshot.faces.length,2);});
+test('contour follows concavity rather than enclosing a circular region',()=>{const shape=[11,12,13,21,31],points=pixelContour(shape,10,10);assert.ok(points.length>=6);assert.ok(points.every(p=>p.every(n=>n>=0&&n<=1)));assert.match(holdPath({contour:points},100,100),/^M.* Z$/);assert.ok(points.some(([x,y])=>x===.2&&y===.2));});
+test('automatic background and contour detection works on a controlled face',()=>{const width=100,height=100,data=new Uint8ClampedArray(40000);for(let i=0;i<data.length;i+=4)data.set([140,130,120,255],i);for(let y=40;y<50;y++)for(let x=40;x<50;x++)data.set([230,20,20,255],(y*width+x)*4);const result=detectHolds({data,width,height,automatic:true});assert.equal(result.candidates.length,1);assert.ok(result.candidates[0].contour.length>=3);});

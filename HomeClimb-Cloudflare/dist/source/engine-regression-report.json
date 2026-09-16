@@ -1,0 +1,163 @@
+{
+  "note": "Synthetic functional regression only. No expert-labelled data: exactGradeAccuracy and withinOneGradeAccuracy cannot be measured.",
+  "exactGradeAccuracy": null,
+  "withinOneGradeAccuracy": null,
+  "before": {
+    "cases": 6,
+    "success": 6,
+    "invalid": 0,
+    "morphologyWarnings": 0,
+    "shortcuts": 2,
+    "grades": [
+      2,
+      3,
+      2,
+      0,
+      5,
+      2
+    ]
+  },
+  "after": {
+    "cases": 6,
+    "success": 6,
+    "invalid": 0,
+    "morphologyWarnings": 0,
+    "shortcuts": 1,
+    "grades": [
+      2,
+      4,
+      3,
+      3,
+      5,
+      3
+    ]
+  },
+  "cases": [
+    {
+      "id": "vertical-dev",
+      "split": "development",
+      "before": {
+        "generated": true,
+        "invalid": false,
+        "grade": 2,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 10
+      },
+      "after": {
+        "generated": true,
+        "invalid": false,
+        "grade": 2,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 12
+      },
+      "elapsedMs": 1576
+    },
+    {
+      "id": "steep-dev",
+      "split": "development",
+      "before": {
+        "generated": true,
+        "invalid": false,
+        "grade": 3,
+        "morphologyWarning": false,
+        "shortcut": true,
+        "highSteps": 11
+      },
+      "after": {
+        "generated": true,
+        "invalid": false,
+        "grade": 4,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 3
+      },
+      "elapsedMs": 2596
+    },
+    {
+      "id": "roof-dev",
+      "split": "development",
+      "before": {
+        "generated": true,
+        "invalid": false,
+        "grade": 2,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 1
+      },
+      "after": {
+        "generated": true,
+        "invalid": false,
+        "grade": 3,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 6
+      },
+      "elapsedMs": 2563
+    },
+    {
+      "id": "vertical-validation",
+      "split": "validation",
+      "before": {
+        "generated": true,
+        "invalid": false,
+        "grade": 0,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 5
+      },
+      "after": {
+        "generated": true,
+        "invalid": false,
+        "grade": 3,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 2
+      },
+      "elapsedMs": 1943
+    },
+    {
+      "id": "steep-validation",
+      "split": "validation",
+      "before": {
+        "generated": true,
+        "invalid": false,
+        "grade": 5,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 14
+      },
+      "after": {
+        "generated": true,
+        "invalid": false,
+        "grade": 5,
+        "morphologyWarning": false,
+        "shortcut": false,
+        "highSteps": 10
+      },
+      "elapsedMs": 2541
+    },
+    {
+      "id": "roof-validation",
+      "split": "validation",
+      "before": {
+        "generated": true,
+        "invalid": false,
+        "grade": 2,
+        "morphologyWarning": false,
+        "shortcut": true,
+        "highSteps": 8
+      },
+      "after": {
+        "generated": true,
+        "invalid": false,
+        "grade": 3,
+        "morphologyWarning": false,
+        "shortcut": true,
+        "highSteps": 3
+      },
+      "elapsedMs": 2079
+    }
+  ]
+}

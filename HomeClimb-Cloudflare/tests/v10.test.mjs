@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {adaptRock} from '../dist/on-rock.js';import {nextPending} from '../dist/classification.js';import {validateRoute} from '../dist/core.js';
+const points=[{x:.2,y:.9},{x:.7,y:.9},{x:.3,y:.1},{x:.8,y:.1}].map(p=>({...p,quality:'unknown',type:'Não informado'}));
+function wall(){return {id:'w',name:'Muro',revision:1,faces:[{id:'f',width:3,height:3}],holds:points.map((p,i)=>({...p,id:'h'+i,faceId:'f',name:'A'+i,match:false}))};}
+test('rock adaptation produces a valid independent route using distinct existing holds',()=>{const w=wall(),before=structuredClone(w),route=adaptRock(w,'f',points);assert.equal(validateRoute(route),'');assert.equal(Object.keys(route.assignments).length,4);assert.deepEqual(w,before);route.snapshot.holds[0].x=0;assert.deepEqual(w,before);});
+test('rock adaptation rejects insufficient holds and invalid points',()=>{assert.throws(()=>adaptRock(wall(),'other',points));assert.throws(()=>adaptRock(wall(),'f',points.slice(0,3)));assert.throws(()=>adaptRock(wall(),'f',points.map(p=>({...p,x:NaN}))));});
+test('classification navigation proceeds spatially and wraps only within current face',()=>{const holds=[{id:'a',faceId:'f',x:0,y:0,quality:'good'},{id:'b',faceId:'f',x:0,y:.5,quality:'unknown'},{id:'c',faceId:'g',x:0,y:.6,quality:'unknown'},{id:'d',faceId:'f',x:0,y:1,quality:'unknown'}];assert.equal(nextPending(holds,holds[0]).id,'b');assert.equal(nextPending(holds,holds[1]).id,'d');assert.equal(nextPending(holds,holds[3]).id,'b');});

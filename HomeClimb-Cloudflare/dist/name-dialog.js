@@ -1,0 +1,5 @@
+export function askName(title,value=''){
+ return new Promise(resolve=>{const dialog=document.createElement('dialog'),form=document.createElement('form'),heading=document.createElement('h2'),label=document.createElement('label'),input=document.createElement('input'),cancel=document.createElement('button'),save=document.createElement('button');
+ heading.textContent=title;heading.tabIndex=-1;label.textContent='Nome';input.value=value;input.required=true;input.maxLength=80;input.autocomplete='off';label.append(input);cancel.textContent='Voltar';cancel.type='button';save.textContent='Salvar';save.type='submit';save.className='primary';form.append(heading,label,cancel,save);dialog.append(form);document.body.append(dialog);let result=null;
+ cancel.onclick=()=>dialog.close();form.onsubmit=e=>{e.preventDefault();if(!input.value.trim())return;result=input.value.trim();dialog.close();};dialog.onclose=()=>{dialog.remove();resolve(result);};dialog.showModal();input.blur();heading.focus({preventScroll:true});});
+}
