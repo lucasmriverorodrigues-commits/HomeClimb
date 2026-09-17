@@ -1,6 +1,6 @@
-# HomeClimb v0.15 — código correspondente
+# HomeClimb v0.18 — código correspondente
 
-Aplicativo estático. Os módulos JS incluídos são o código-fonte, sem etapa de compilação. Sirva a pasta via HTTP local ou HTTPS (Netlify); file:// não suporta os workers. Modelo e runtime estão incluídos para funcionamento offline.
+Aplicativo estático. Os módulos JS incluídos são o código-fonte, sem etapa de compilação. Sirva a pasta via HTTP local ou HTTPS (Cloudflare ou Netlify); file:// não suporta os workers. Modelo e runtime estão incluídos para funcionamento offline.
 
 Código próprio: GNU AGPL-3.0, Copyright 2026 Lucas e colaboradores. Dependências mantêm as licenças indicadas em codigo.html.
 

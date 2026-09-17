@@ -1,0 +1,55 @@
+{
+  "version": "0.18",
+  "automatedTestsPassed": 97,
+  "syntheticCases": 9,
+  "baseFeet": 2,
+  "middleFeetMaximum": 2,
+  "regressionFeet": [
+    {
+      "id": "roof-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "roof-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "steep-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "steep-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "vertical-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "vertical-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "dense-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "dense-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "compact-dev",
+      "base": 2,
+      "middle": 0
+    }
+  ],
+  "physicalValidation": false
+}

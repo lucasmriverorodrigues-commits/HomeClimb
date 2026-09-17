@@ -1,0 +1,212 @@
+{
+  "note": "Synthetic regression, not human-validated routes or grades.",
+  "cases": [
+    {
+      "id": "roof-dev",
+      "split": "development",
+      "before": {
+        "feet": 9,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.3000000000000001,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.450439785098963,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 5450
+    },
+    {
+      "id": "roof-validation",
+      "split": "validation",
+      "before": {
+        "feet": 9,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.336,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": true
+      },
+      "after": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.45043978509896315,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": true
+      },
+      "elapsedMs": 4227
+    },
+    {
+      "id": "steep-dev",
+      "split": "development",
+      "before": {
+        "feet": 11,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.336,
+        "grade": 4,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.45043978509896293,
+        "grade": 4,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 6581
+    },
+    {
+      "id": "steep-validation",
+      "split": "validation",
+      "before": {
+        "feet": 11,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.29999999999999993,
+        "grade": 5,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.45043978509896293,
+        "grade": 5,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 8561
+    },
+    {
+      "id": "vertical-dev",
+      "split": "development",
+      "before": {
+        "feet": 8,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.29999999999999977,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.6000000000000001,
+        "grade": 1,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 4807
+    },
+    {
+      "id": "vertical-validation",
+      "split": "validation",
+      "before": {
+        "feet": 7,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.3000000000000001,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.29999999999999977,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 6864
+    },
+    {
+      "id": "dense-dev",
+      "split": "development",
+      "before": {
+        "feet": 9,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 4,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3501785258978627,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 11329
+    },
+    {
+      "id": "dense-validation",
+      "split": "validation",
+      "before": {
+        "feet": 12,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3757672151745014,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 4,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3757672151745014,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 8323
+    },
+    {
+      "id": "compact-dev",
+      "split": "development",
+      "before": {
+        "feet": 10,
+        "handCount": 10,
+        "closePairs": 2,
+        "minHandSeparation": 0.19233824372703412,
+        "grade": 1,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 6,
+        "handCount": 10,
+        "closePairs": 0,
+        "minHandSeparation": 0.25200000000000006,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "elapsedMs": 15877
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const limbs=['LH','RH','LF','RF'];
 export function bodyPosition(state,ctx){
  const key=limbs.map(l=>state[l]||'').join('|');
  if(ctx.bodyCache?.has(key))return ctx.bodyCache.get(key);
- const result=calculateBody(state,ctx);ctx.bodyCache?.set(key,result);return result;
+ const result=calculateBody(state,ctx);if(ctx.bodyCache&&ctx.bodyCache.size<C.search.bodyCacheLimit)ctx.bodyCache.set(key,result);return result;
 }
 function calculateBody(state,ctx){
  const {holds,profile:p,face}=ctx,b=C.body;

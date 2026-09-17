@@ -1,0 +1,17 @@
+{
+  "version": "0.16",
+  "date": "2026-09-17",
+  "syntheticCases": 9,
+  "additionalFeet": {
+    "before": 9.555555555555555,
+    "after": 3.5555555555555554
+  },
+  "allMorphologiesFeasible": true,
+  "handCrowdingPairs": {
+    "before": 2,
+    "after": 0
+  },
+  "physicalValidation": false,
+  "published": false,
+  "automatedTestsPassed": 89
+}

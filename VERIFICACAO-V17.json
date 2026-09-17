@@ -1,0 +1,17 @@
+{
+  "version": "0.17",
+  "automatedTestsPassed": 93,
+  "syntheticCases": 9,
+  "additionalFeet": {
+    "before": 3.5555555555555554,
+    "after": 0.3333333333333333,
+    "range": [
+      0,
+      2
+    ]
+  },
+  "allMorphologiesFeasible": true,
+  "handsUsedAsFeet": true,
+  "physicalValidation": false,
+  "published": false
+}

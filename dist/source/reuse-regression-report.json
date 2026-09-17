@@ -1,0 +1,283 @@
+{
+  "note": "v0.16 vs v0.17, synthetic cases, not the measured walls in the screenshots.",
+  "cases": [
+    {
+      "id": "roof-dev",
+      "split": "development",
+      "before": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.450439785098963,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.3359999999999999,
+        "grade": 4,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h0_2",
+        "h0_3",
+        "h2_4",
+        "h1_5",
+        "h2_6"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 3780
+    },
+    {
+      "id": "roof-validation",
+      "split": "validation",
+      "before": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.45043978509896315,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": true
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.6000000000000002,
+        "grade": 5,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h1_2",
+        "h3_4",
+        "h3_2",
+        "h0_4"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 5029
+    },
+    {
+      "id": "steep-dev",
+      "split": "development",
+      "before": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.45043978509896293,
+        "grade": 4,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.336,
+        "grade": 5,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h7_1",
+        "h7_0",
+        "h5_0",
+        "h4_2"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 2950
+    },
+    {
+      "id": "steep-validation",
+      "split": "validation",
+      "before": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.45043978509896293,
+        "grade": 5,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.6000000000000002,
+        "grade": 6,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h7_2",
+        "h5_2",
+        "h7_0",
+        "h2_2",
+        "h4_4"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 1456
+    },
+    {
+      "id": "vertical-dev",
+      "split": "development",
+      "before": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.6000000000000001,
+        "grade": 1,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 2,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.6000000000000001,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h8_6",
+        "h5_4",
+        "h5_6",
+        "h2_6"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 2436
+    },
+    {
+      "id": "vertical-validation",
+      "split": "validation",
+      "before": {
+        "feet": 3,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.29999999999999977,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 1,
+        "handCount": 6,
+        "closePairs": 0,
+        "minHandSeparation": 0.6000000000000001,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h6_4",
+        "h3_4",
+        "h4_6",
+        "h2_6",
+        "h8_6"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 3418
+    },
+    {
+      "id": "dense-dev",
+      "split": "development",
+      "before": {
+        "feet": 4,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3501785258978627,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.29999999999999993,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h8_4near",
+        "h5_4near",
+        "h4_1",
+        "h5_3",
+        "h3_1",
+        "h8_6"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 3436
+    },
+    {
+      "id": "dense-validation",
+      "split": "validation",
+      "before": {
+        "feet": 4,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3757672151745014,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 8,
+        "closePairs": 0,
+        "minHandSeparation": 0.3000000000000001,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h8_4",
+        "h8_6",
+        "h5_3",
+        "h3_1",
+        "h5_4",
+        "h2_1"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 3581
+    },
+    {
+      "id": "compact-dev",
+      "split": "development",
+      "before": {
+        "feet": 6,
+        "handCount": 10,
+        "closePairs": 0,
+        "minHandSeparation": 0.25200000000000006,
+        "grade": 2,
+        "morphology": false,
+        "shortcut": false
+      },
+      "after": {
+        "feet": 0,
+        "handCount": 10,
+        "closePairs": 0,
+        "minHandSeparation": 0.25200000000000006,
+        "grade": 3,
+        "morphology": false,
+        "shortcut": false
+      },
+      "handsUsedAsFeet": [
+        "h7_4",
+        "h5_4near",
+        "h7_6",
+        "h4_3",
+        "h4_1"
+      ],
+      "footReviewComplete": true,
+      "elapsedMs": 5102
+    }
+  ]
+}

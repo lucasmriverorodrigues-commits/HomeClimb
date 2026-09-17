@@ -1,6 +1,14 @@
-# HomeClimb 0.15 — GitHub + Cloudflare Pages
+# HomeClimb 0.18 — GitHub + Cloudflare
 
-Esta pasta contém a versão 0.15 completa, conferida com a versão mais recente em HomeClimb/dist do Desktop. O aplicativo foi preservado; a configuração de publicação é separada do Netlify e do Base44.
+Esta pasta contém a versão 0.18, com dois pés nas linhas baixas para a saída e reaproveitamento das agarras de mão como pés durante a subida. Só acrescenta até dois apoios no meio se a busca com os pés da base não encontrar uma sequência viável. O detector, a câmera, os dados salvos e as demais ferramentas foram preservados. A versão do Netlify não foi modificada.
+
+## Atualizar o projeto Workers já publicado
+
+No GitHub Desktop, selecione HomeClimb, confira as alterações, faça Commit to main e Push origin. O Cloudflare publica automaticamente a branch main. O comando de build continua sendo `node verificar.mjs`; o deploy é `npx wrangler deploy --assets ./dist --name homeclimb --compatibility-date 2026-09-16`.
+
+Abra o mesmo endereço workers.dev já usado. Feche todas as janelas e o atalho do HomeClimb e reabra após a nova versão ser baixada. A versão 0.18 aparece no aplicativo. Não limpe os dados. Uma atualização no mesmo endereço preserva o acervo; o backup abaixo é necessário ao trocar de endereço e útil como cópia de segurança.
+
+As instruções de criação de um novo projeto Pages abaixo são opcionais; o projeto Workers existente já atende este aplicativo.
 
 ## 1. Guardar seus dados
 

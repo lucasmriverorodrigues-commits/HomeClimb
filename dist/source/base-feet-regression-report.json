@@ -1,0 +1,218 @@
+{
+  "version": "0.18",
+  "note": "Synthetic fixtures; not physically validated or the measured walls in the screenshots.",
+  "cases": [
+    {
+      "id": "roof-dev",
+      "split": "development",
+      "feet": 2,
+      "handCount": 6,
+      "closePairs": 0,
+      "minHandSeparation": 0.336,
+      "grade": 4,
+      "morphology": false,
+      "shortcut": true,
+      "baseFeet": [
+        "h7_0",
+        "h8_1"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h6_1",
+        "h8_0"
+      ],
+      "elapsedMs": 805
+    },
+    {
+      "id": "roof-validation",
+      "split": "validation",
+      "feet": 2,
+      "handCount": 6,
+      "closePairs": 0,
+      "minHandSeparation": 0.45043978509896315,
+      "grade": 4,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_6",
+        "h7_6"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h3_6",
+        "h2_5",
+        "h0_2",
+        "h2_1",
+        "h1_4"
+      ],
+      "elapsedMs": 609
+    },
+    {
+      "id": "steep-dev",
+      "split": "development",
+      "feet": 2,
+      "handCount": 6,
+      "closePairs": 0,
+      "minHandSeparation": 0.5999999999999996,
+      "grade": 5,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_1",
+        "h8_3"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h8_0",
+        "h6_0",
+        "h5_2",
+        "h3_2",
+        "h2_4"
+      ],
+      "elapsedMs": 464
+    },
+    {
+      "id": "steep-validation",
+      "split": "validation",
+      "feet": 2,
+      "handCount": 6,
+      "closePairs": 0,
+      "minHandSeparation": 0.450439785098963,
+      "grade": 6,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_5",
+        "h8_6"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h5_4",
+        "h7_6",
+        "h6_5",
+        "h3_4",
+        "h2_2"
+      ],
+      "elapsedMs": 474
+    },
+    {
+      "id": "vertical-dev",
+      "split": "development",
+      "feet": 2,
+      "handCount": 6,
+      "closePairs": 0,
+      "minHandSeparation": 0.6000000000000001,
+      "grade": 2,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_4",
+        "h8_5"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h8_6",
+        "h5_6",
+        "h2_6",
+        "h5_4",
+        "h2_4"
+      ],
+      "elapsedMs": 402
+    },
+    {
+      "id": "vertical-validation",
+      "split": "validation",
+      "feet": 2,
+      "handCount": 6,
+      "closePairs": 0,
+      "minHandSeparation": 0.6000000000000001,
+      "grade": 2,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_4",
+        "h8_5"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h6_4",
+        "h3_4",
+        "h4_6",
+        "h2_6",
+        "h8_6"
+      ],
+      "elapsedMs": 336
+    },
+    {
+      "id": "dense-dev",
+      "split": "development",
+      "feet": 2,
+      "handCount": 8,
+      "closePairs": 0,
+      "minHandSeparation": 0.39854861685872156,
+      "grade": 2,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_1near",
+        "h8_2near"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h6_0",
+        "h8_0near",
+        "h4_1near",
+        "h4_0",
+        "h1_1near"
+      ],
+      "elapsedMs": 904
+    },
+    {
+      "id": "dense-validation",
+      "split": "validation",
+      "feet": 2,
+      "handCount": 8,
+      "closePairs": 0,
+      "minHandSeparation": 0.3757672151745014,
+      "grade": 3,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_1near",
+        "h8_2near"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h6_1",
+        "h7_0near",
+        "h3_0",
+        "h4_1",
+        "h1_0near",
+        "h8_0near"
+      ],
+      "elapsedMs": 807
+    },
+    {
+      "id": "compact-dev",
+      "split": "development",
+      "feet": 2,
+      "handCount": 10,
+      "closePairs": 0,
+      "minHandSeparation": 0.2569708154635465,
+      "grade": 3,
+      "morphology": false,
+      "shortcut": false,
+      "baseFeet": [
+        "h8_2near",
+        "h8_3"
+      ],
+      "middleFeet": [],
+      "handsUsedAsFeet": [
+        "h6_4near",
+        "h8_3near",
+        "h7_1"
+      ],
+      "elapsedMs": 1887
+    }
+  ]
+}
