@@ -35,7 +35,7 @@ export function searchBetas(route,profile,{intended=null,bodyCache=null}={}){
    if(pose)result.push({...state,...pose,climberProfile:profile.id,rank:pose.cost+(lf.features.foot+rf.features.foot)*C.move.feet/2});
   }
   // One-foot postures are possible, but carry a missing-contact cost.
-  for(const f of feet){if(!supportedStart(f))continue;const state={...hands,LF:f.x<mid.x?f.id:null,RF:f.x>=mid.x?f.id:null},pose=bodyPosition(state,ctx);if(pose)result.push({...state,...pose,climberProfile:profile.id,rank:pose.cost+f.features.foot*C.move.feet+C.move.missingContact});}
+  if(!starting||!result.length)for(const f of feet){if(!supportedStart(f))continue;const state={...hands,LF:f.x<mid.x?f.id:null,RF:f.x>=mid.x?f.id:null},pose=bodyPosition(state,ctx);if(pose)result.push({...state,...pose,climberProfile:profile.id,rank:pose.cost+f.features.foot*C.move.feet+C.move.missingContact});}
   result.sort((a,b)=>a.rank-b.rank);const kept=result.slice(0,cfg.poses);poseCache.set(k,kept);return kept;
  }
  const initialIndex=intended?Math.max(intended.indexOf(start.LH),intended.indexOf(start.RH))+1:0;
@@ -59,7 +59,8 @@ export function searchBetas(route,profile,{intended=null,bodyCache=null}={}){
      const crux=Math.max(node.crux,...t.moves.map(m=>m.difficulty)),total=node.total+t.cost,index=intended?Math.min(intended.length,node.index+1):0;
      const k=key(pose)+'|'+index,score=crux+total*cfg.costWeight;
      if((seen.get(k)??Infinity)<=score)continue;seen.set(k,score);
-     next.push({state:pose,states:[...node.states,...t.moves.map(m=>({...m.toState,climberProfile:profile.id}))],moves:[...node.moves,...t.moves],crux,total,index,score:score+progress(pose)*cfg.progressWeight});
+     const reached={...t.moves.at(-1).toState,climberProfile:profile.id};
+     next.push({state:reached,states:[...node.states,...t.moves.map(m=>({...m.toState,climberProfile:profile.id}))],moves:[...node.moves,...t.moves],crux,total,index,score:score+progress(reached)*cfg.progressWeight});
     }
    }
   }

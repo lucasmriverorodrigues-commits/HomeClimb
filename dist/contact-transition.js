@@ -17,7 +17,7 @@ export function contactTransition(from,to,hand,ctx){
    const next={LH:state.LH,RH:state.RH,LF:state.LF,RF:state.RF,[limb]:to[limb]};
    let move;
    if(!next[limb]){
-    const pose=bodyPosition(next,ctx);
+    const before=state.hip?state:bodyPosition(state,ctx),pose=before&&bodyPosition(next,ctx,before.hip);
     if(pose)move={movingLimb:limb,targetHold:null,difficulty:C.move.footMove,features:{release:true},fromState:state,toState:{...next,...pose}};
    }else move=moveDifficulty(state,next,limb,ctx);
    if(!move){valid=false;break;}

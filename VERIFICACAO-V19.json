@@ -1,0 +1,129 @@
+{
+  "version": "0.19",
+  "engine": "movement-3.0",
+  "automatedTestsPassed": 106,
+  "evidence": [
+    {
+      "log": "all-v19-release-tests.log",
+      "passed": 105
+    },
+    {
+      "log": "direction-v19-final.log",
+      "passed": 9
+    },
+    {
+      "log": "generator-v19-release.log",
+      "passed": 14
+    }
+  ],
+  "testCountExplanation": "Full suite: 105 passed. Direction suite was expanded from 8 to 9 and rerun; generator suite (14) rerun after shared-cache optimization. Unique total: 106.",
+  "syntheticCases": 15,
+  "baseFeet": 2,
+  "middleFeetMaximum": 2,
+  "regressionFeet": [
+    {
+      "id": "roof-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "roof-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "steep-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "steep-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "vertical-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "vertical-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "dense-dev",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "dense-validation",
+      "base": 2,
+      "middle": 0
+    },
+    {
+      "id": "compact-dev",
+      "base": 2,
+      "middle": 0
+    }
+  ],
+  "orientedCases": [
+    {
+      "kind": "down",
+      "movementStyle": "compact",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.1730575433455943,
+      "oriented": 8,
+      "elapsedMs": 11517
+    },
+    {
+      "kind": "down",
+      "movementStyle": "balanced",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.246152478631728,
+      "oriented": 8,
+      "elapsedMs": 5982
+    },
+    {
+      "kind": "down",
+      "movementStyle": "wide",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.3513193552968892,
+      "oriented": 8,
+      "elapsedMs": 4178
+    },
+    {
+      "kind": "mixed",
+      "movementStyle": "compact",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.1730575433455943,
+      "oriented": 8,
+      "elapsedMs": 6389
+    },
+    {
+      "kind": "mixed",
+      "movementStyle": "balanced",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.3513193552968892,
+      "oriented": 8,
+      "elapsedMs": 5559
+    },
+    {
+      "kind": "mixed",
+      "movementStyle": "wide",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.3513193552968892,
+      "oriented": 8,
+      "elapsedMs": 7276
+    }
+  ],
+  "physicalValidation": false,
+  "visualVerification": false,
+  "visualVerificationNote": "Computer-use tool stopped because it could not reliably identify the browser URL. Mobile interaction remains to be checked."
+}

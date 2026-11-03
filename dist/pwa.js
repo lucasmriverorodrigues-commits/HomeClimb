@@ -17,7 +17,7 @@ async function checkOffline(){
   if(!worker)return;
   const channel=new MessageChannel();let finished=false;
   const timer=setTimeout(()=>{if(!finished)say('Não foi possível confirmar o download. Conecte à internet e tente novamente.');channel.port1.close();},5000);
-  channel.port1.onmessage=({data})=>{finished=true;clearTimeout(timer);channel.port1.close();say(data.ready?'Pronto para usar sem internet.':'Download incompleto. Conecte à internet e toque em Verificar download.');};
+  channel.port1.onmessage=({data})=>{finished=true;clearTimeout(timer);channel.port1.close();const version=typeof data.version==='string'?data.version.replace('homeclimb-shell-',''):'';say((data.ready?'Pronto para usar sem internet.':'Download incompleto. Conecte à internet e toque em Verificar download.')+(version?' Versão em uso: '+version+'.':''));};
   worker.postMessage({type:'OFFLINE_STATUS'},[channel.port2]);
 }
 async function register(){
@@ -30,7 +30,7 @@ async function register(){
       worker.addEventListener('statechange',()=>{
         if(worker.state==='installed'){if(registration.active)$('#pwa-update').hidden=false;checkOffline();}
         if(worker.state==='activated')checkOffline();
-        if(worker.state==='redundant'&&!registration.active)say('O download falhou. Confira a internet e tente novamente.');
+        if(worker.state==='redundant')say('O download falhou. Confira a internet e tente novamente.');
       });
     };
     observe();registration.addEventListener('updatefound',observe);

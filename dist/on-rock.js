@@ -1,8 +1,9 @@
-import {rockTargets,angleDifference} from './rock-scale.js';
+import {rockTargets} from './rock-scale.js';
 import {id} from './core.js';
 import {calibration as C} from './generation-config.js';
 import {gradeBoulder,predictionSummary} from './boulder-grader.js';
 import {proposeSupports,pruneSupports} from './support-proposal.js';
+import {directionDistance} from './hold-direction.js';
 // A geometric approximation in the plane of the photo, not a 3D reconstruction.
 export function adaptRock(wall,faceId,points,aspect=1,calibration=null){
  const face=wall.faces.find(f=>f.id===faceId),holds=wall.holds.filter(h=>h.faceId===faceId&&!h.footOnly);
@@ -11,7 +12,7 @@ export function adaptRock(wall,faceId,points,aspect=1,calibration=null){
  const targets=rockTargets(points,aspect,face,calibration);
  let beam=[{cost:0,chosen:[]}];
  for(let i=0;i<targets.length;i++){
-  const p=targets[i],pool=holds.map(h=>({h,cost:Math.hypot((h.x-p.x)*face.width,(h.y-p.y)*face.height)+(p.quality!=='unknown'&&p.quality!==h.quality?.25:0)+(p.type!=='Não informado'&&p.type!==h.type ? .35 : 0)+(Number.isFinite(p.direction)?angleDifference(p.direction,h.direction||0)/180*.4:0)})).sort((a,b)=>a.cost-b.cost).slice(0,Math.max(40,points.length));
+  const p=targets[i],pool=holds.map(h=>({h,cost:Math.hypot((h.x-p.x)*face.width,(h.y-p.y)*face.height)+(p.quality!=='unknown'&&p.quality!==h.quality?.25:0)+(p.type!=='Não informado'&&p.type!==h.type ? .35 : 0)+(Number.isFinite(p.direction)?(directionDistance(p.direction,h)??.5)*.8:0)})).sort((a,b)=>a.cost-b.cost).slice(0,Math.max(40,points.length));
   const next=[];
   for(const partial of beam)for(const {h,cost} of pool){if(partial.chosen.some(v=>v.id===h.id))continue;const previous=partial.chosen.at(-1),sourcePrevious=targets[i-1];const movement=previous?Math.hypot(((h.x-previous.x)-(p.x-sourcePrevious.x))*face.width,((h.y-previous.y)-(p.y-sourcePrevious.y))*face.height):0;next.push({cost:partial.cost+cost+movement,chosen:[...partial.chosen,h]});}
   beam=next.sort((a,b)=>a.cost-b.cost).slice(0,24);if(!beam.length)throw Error('Não foi possível encontrar agarras distintas.');

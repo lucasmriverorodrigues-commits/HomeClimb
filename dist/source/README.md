@@ -1,4 +1,4 @@
-# HomeClimb v0.18 — código correspondente
+# HomeClimb v0.19 — código correspondente
 
 Aplicativo estático. Os módulos JS incluídos são o código-fonte, sem etapa de compilação. Sirva a pasta via HTTP local ou HTTPS (Cloudflare ou Netlify); file:// não suporta os workers. Modelo e runtime estão incluídos para funcionamento offline.
 
@@ -9,9 +9,3 @@ Modelo original: https://huggingface.co/jwlarocque/yolov8n-freeclimbs-detect-2 .
 Runtime: onnxruntime-web@1.22.0 no npm, arquivos dist/ort.wasm.min.js, dist/ort-wasm-simd-threaded.mjs e dist/ort-wasm-simd-threaded.wasm; fonte https://github.com/microsoft/onnxruntime/tree/v1.22.0 .
 
 A foto enviada para avaliação não faz parte deste pacote.
-
-
-
-
-
-

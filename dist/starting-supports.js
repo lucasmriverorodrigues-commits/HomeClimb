@@ -29,8 +29,8 @@ export function startingSupportPlans(route,face){
 
 // Middle supports are a last resort, considered only after all shortlisted
 // hand paths have failed with the two base supports. Never add them for grade.
-export function rescueMiddleSupports(plan,face){
- const cfg=C.startingSupports,route=plan.route,analysisCache={snapshot:route.snapshot,bodies:new Map()};
+export function rescueMiddleSupports(plan,face,sharedCache=null){
+ const cfg=C.startingSupports,route=plan.route,analysisCache=sharedCache||{snapshot:route.snapshot,bodies:new Map()};
  const evaluate=r=>gradeBoulder(r,{analysisCache});
  const basePrediction=evaluate(route);
  if(valid(basePrediction))return {assignments:route.assignments,prediction:basePrediction,baseFeet:plan.baseFeet,middleFeet:[],baseY:plan.baseY};

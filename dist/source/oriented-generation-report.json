@@ -1,0 +1,60 @@
+{
+  "note": "Synthetic walls, heuristic 2D posture model; no human grade validation.",
+  "cases": [
+    {
+      "kind": "down",
+      "movementStyle": "compact",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.1730575433455943,
+      "oriented": 8,
+      "elapsedMs": 11517
+    },
+    {
+      "kind": "down",
+      "movementStyle": "balanced",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.246152478631728,
+      "oriented": 8,
+      "elapsedMs": 5982
+    },
+    {
+      "kind": "down",
+      "movementStyle": "wide",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.3513193552968892,
+      "oriented": 8,
+      "elapsedMs": 4178
+    },
+    {
+      "kind": "mixed",
+      "movementStyle": "compact",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.1730575433455943,
+      "oriented": 8,
+      "elapsedMs": 6389
+    },
+    {
+      "kind": "mixed",
+      "movementStyle": "balanced",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.3513193552968892,
+      "oriented": 8,
+      "elapsedMs": 5559
+    },
+    {
+      "kind": "mixed",
+      "movementStyle": "wide",
+      "feasible": true,
+      "feet": 2,
+      "maxHandTravel": 1.3513193552968892,
+      "oriented": 8,
+      "elapsedMs": 7276
+    }
+  ],
+  "version": "0.19"
+}
