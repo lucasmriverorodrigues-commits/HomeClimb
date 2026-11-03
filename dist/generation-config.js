@@ -1,7 +1,7 @@
 // Engineering priors, NOT measured grade boundaries or a validated biomechanical model.
 // Keep these versioned so a future fitted model can replace them without changing data entry.
 export const calibration = {
- version:'movement-3.0', style:'DEFAULT_BALANCED',
+ version:'movement-3.1', style:'DEFAULT_BALANCED',
  profiles:[{id:'SHORT',height:1.55,armSpan:1.55,legLength:.78,torsoLength:.43,hipMobilityRange:.65},{id:'AVERAGE',height:1.72,armSpan:1.74,legLength:.87,torsoLength:.48,hipMobilityRange:.65},{id:'TALL',height:1.9,armSpan:1.94,legLength:.96,torsoLength:.53,hipMobilityRange:.65}],
  handQuality:{good:0,medium:2.2,bad:4.5,unknown:3},
  footQuality:{good:0,medium:1,bad:2.4,unknown:1.8},

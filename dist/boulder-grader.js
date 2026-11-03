@@ -15,14 +15,14 @@ export function detectShortcut(easiest,intended,handIds=[]){
  return {detected:skipped.length>=C.grade.shortcutSkipped&&drop>=C.grade.shortcutDrop,skipped,drop,types:[...(skipped.length?['skipHold']:[]),...(easiest.moves.some(m=>m.features.matchRequired)?['unexpectedMatch']:[]),...(handAsFoot?['handAsFootShortcut']:[]),...(easiest.moves.some(m=>m.features.dynamicRequirement>0)?['dynamicSkip']:[])]};
 }
 // No target grade is accepted here. The saved grade/name are deliberately never read.
-export function gradeBoulder(route,{intended=null,profiles=C.profiles,analysisCache=null}={}){
+export function gradeBoulder(route,{intended=null,prescribedMoves=null,profiles=C.profiles,analysisCache=null}={}){
  // A local refinement may reuse geometry for the same immutable wall. The allowed
  // contacts/betas are still searched afresh after each support is removed.
  const cache=analysisCache||{snapshot:route.snapshot,bodies:new Map()};
  if(cache.snapshot!==route.snapshot)throw Error('Cache de análise pertence a outro muro.');
  const bodyCache=profile=>{const key=JSON.stringify(profile);if(!cache.bodies.has(key))cache.bodies.set(key,new Map());return cache.bodies.get(key);};
  const results=profiles.map(profile=>{
-  const search=searchBetas(route,profile,{bodyCache:bodyCache(profile)}),ranked=search.betas.map(beta=>({beta,features:betaFeatures(beta)})).sort((a,b)=>a.features.score-b.features.score),best=ranked[0];
+  const search=searchBetas(route,profile,{prescribedMoves,bodyCache:bodyCache(profile)}),ranked=search.betas.map(beta=>({beta,features:betaFeatures(beta)})).sort((a,b)=>a.features.score-b.features.score),best=ranked[0];
   return {profile:profile.id,feasible:!!best,score:best?.features.score??null,beta:best?.beta??null,features:best?.features??null,alternatives:ranked.slice(1).map(v=>v.beta),expanded:search.expanded};
  });
  const feasible=results.filter(r=>r.feasible),scores=feasible.map(r=>r.score),spread=scores.length?Math.max(...scores)-Math.min(...scores):0;

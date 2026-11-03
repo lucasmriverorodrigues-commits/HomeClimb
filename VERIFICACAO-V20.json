@@ -1,0 +1,42 @@
+{
+  "version": "0.20",
+  "engine": "movement-3.1",
+  "automatedTestsPassed": 113,
+  "evidence": [
+    {
+      "file": "all-v20-release-tests.log",
+      "tests": 110,
+      "passed": 109,
+      "failed": 1,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    {
+      "file": "v13-v20-final-tests.log",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    {
+      "file": "v14-v20-final-tests.log",
+      "tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    {
+      "file": "rock-v20-final-tests.log",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  ],
+  "testCountExplanation": "109 passed initially; v13 (4 tests) rerun after updating an outdated expectation that excluded foot-only holds even as feet. Three v13 passes replaced, one corrected; v14 remaining 3 passed. Unique total: 113. Rock fidelity (7) also rerun after crop-aspect assertion and display metadata changes.",
+  "physicalValidation": false,
+  "visualVerification": false
+}
